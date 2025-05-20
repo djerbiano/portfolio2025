@@ -12,7 +12,7 @@ export default function Header() {
       <HamburgerMenu open={open} setOpen={setOpen} />
       <header className={` ${styles.header} ${open ? styles.openMenu : styles.closeMenu}`}>
         <nav>
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link href="#hero" onClick={() => setOpen(false)}>
             ACCUEIL
           </Link>
           <Link href="/#presentation" onClick={() => setOpen(false)}>

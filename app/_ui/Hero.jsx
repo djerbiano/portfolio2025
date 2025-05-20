@@ -1,12 +1,10 @@
-import Image from "next/image";
 import styles from "../page.module.css";
+import ImgProfile from "./ImgProfile";
 
 export default function Hero() {
   return (
-    <div className={styles.heroContainer}>
-      <div className={styles.heroImageContainer}>
-        <Image src="/hero.png" alt="photo de saber" width={400} height={400} />
-      </div>
+    <div className={styles.heroContainer} id="hero">
+      <ImgProfile />
       <div className={styles.heroTextContainer}>
         <p>Bonjour !</p>
         <p>Moi c&apos;est Saber. </p>
