@@ -1,11 +1,10 @@
 import styles from "../page.module.css";
+import Image from "next/image";
 export default function OneProject() {
   return (
     <div className={styles.project}>
-      <h1>nom du projet</h1>
-      <p>description</p>
-      <img src="/project.png" alt="image du projet" />
-   
+      <p>nom du projet</p>
+      <Image src="/mask3.png" alt="image du projet" width={400} height={400} />
     </div>
   );
 }

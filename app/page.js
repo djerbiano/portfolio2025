@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Schibsted_Grotesk } from "next/font/google";
 import styles from "./page.module.css";
 import Header from "./_ui/Header";
