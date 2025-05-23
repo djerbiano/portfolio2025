@@ -198,6 +198,15 @@
   background-color: #272727;
   color: #ffffff;
 }
+
+.containerExperience{
+  p {
+    margin-bottom: 50px;
+  }
+  .verticalTimeline{
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 768px) {
   .openMenu {
     transform: translateX(0);
