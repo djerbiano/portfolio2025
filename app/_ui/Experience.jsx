@@ -8,65 +8,126 @@ export default function Experience() {
   const observerProps = {
     triggerOnce: false,
   };
+
+  // Styles communs
+  const Styles = {
+    content: {
+      background: "rgb(0, 0, 0)",
+      color: "#ffffff",
+      boxShadow: "rgba(255, 255, 255, 0.22) 0px 1px 20px 6px",
+      border: "1px solid rgb(255, 255, 255)",
+    },
+    arrow: {
+      borderRight: "7px solid rgb(255, 255, 255)",
+    },
+    icon: {
+      background: "rgb(0, 0, 0)",
+    },
+  };
+
+  // icones
+  const getIcon = (icon) => {
+    const Icon =
+      icon === "school" ? (
+        <MdSchool color="#c54abd" aria-label="Éducation" />
+      ) : (
+        <MdWork color="#35cadc" aria-label="Expérience professionnelle" />
+      );
+    return Icon;
+  };
+
+  // Données des expériences
+  const experiences = [
+    {
+      date: "2008 (1 mois)",
+      icon: getIcon("school"),
+      title: "Stage - Technicien en maintenance informatique",
+      subtitle: "Djerba, Tunisie",
+      description: "Maintenance hardware / software",
+    },
+    {
+      date: "2008 (1 mois)",
+      icon: getIcon("school"),
+      title: "Stage - Technicien en maintenance informatique",
+      subtitle: "Djerba, Tunisie",
+      description: "Maintenance hardware / software",
+    },
+    {
+      date: "2008 - 2010",
+      icon: getIcon("work"),
+      title: "Technicien en maintenance et réseau informatique",
+      subtitle: "Djerba, Tunisie",
+      description: "Maintenance hardware/software, assemblage PC, gestion de réseau, vente et support client",
+    },
+    {
+      date: "2011 ( 6 mois )",
+      icon: getIcon("work"),
+      title: "Peintre en bâtiment",
+      subtitle: "Djerba, Tunisie",
+      description: "Préparation des surfaces et travaux de peinture",
+    },
+    {
+      date: "2012",
+      icon: getIcon("work"),
+      title: "Photographe hôtelier",
+      subtitle: "Djerba, Tunisie",
+      description: "Séance de Shooting, Retouche photo",
+    },
+
+    {
+      date: "2013",
+      icon: getIcon("school"),
+      title: "Stage - Agent de sécurité",
+      subtitle: "Brest, France",
+      description: "Accueil de public et accompagnement des clients",
+    },
+    {
+      date: "2014 - 2015",
+      icon: getIcon("work"),
+      title: "Agent de prévention et sécurité (SST, Palpation de sécurité)",
+      subtitle: "Brest, France",
+      description: "Accueil de public et accompagnement des clients",
+    },
+    {
+      date: "2015 - 2017",
+      icon: getIcon("work"),
+      title: "Agent de Service de Sécurité Incendie et d’Assistance à Personnes",
+      subtitle: "Brest, France",
+      description:
+        "Assurer la sécurité des personnes et la sécurité incendie des biens, Sensibiliser les employés, Intervenir face à un début d’incendie, Alerter, évacuer le public et accueillir les secours en cas de problème",
+    },
+    {
+      date: "2017 - 2024",
+      icon: getIcon("work"),
+      title: "Chef d’équipe de service de sécurité incendie",
+      subtitle: "Brest, France",
+      description:
+        "Encadrer et former l’équipe de sécurité, Diriger le poste de sécurité lors des sinistres, Accompagnement de la commission de sécurité",
+    },
+  ];
   return (
     <div className={styles.containerExperience}>
       <p className={styles.title}>Expérience</p>
       <VerticalTimeline className={styles.verticalTimeline}>
+        {experiences.map((exp, index) => (
+          <VerticalTimelineElement
+            key={index}
+            className="vertical-timeline-element--work"
+            contentStyle={Styles.content}
+            contentArrowStyle={Styles.arrow}
+            date={exp.date}
+            iconStyle={Styles.icon}
+            icon={exp.icon}
+            intersectionObserverProps={observerProps}
+          >
+            <h3 className="vertical-timeline-element-title">{exp.title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{exp.subtitle}</h4>
+            <p>{exp.description}</p>
+          </VerticalTimelineElement>
+        ))}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255, 255, 255)", color: "#000000" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(255, 255, 255)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(255, 255, 255)", color: "#fff" }}
-          icon={<MdSchool color="#000000" />}
-          intersectionObserverProps={observerProps}
-        >
-          <h3 className="vertical-timeline-element-title">poste</h3>
-          <h4 className="vertical-timeline-element-subtitle">zone</h4>
-          <p>tâches</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255, 255, 255)", color: "#000000" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(255, 255, 255)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(255, 255, 255)", color: "#fff" }}
-          icon={<MdSchool color="#000000" />}
-          intersectionObserverProps={observerProps}
-        >
-          <h3 className="vertical-timeline-element-title">poste</h3>
-          <h4 className="vertical-timeline-element-subtitle">zone</h4>
-          <p>tâches</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255, 255, 255)", color: "#000000" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(255, 255, 255)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(255, 255, 255)", color: "#fff" }}
-          icon={<MdWork color="#000000" />}
-          intersectionObserverProps={observerProps}
-        >
-          <h3 className="vertical-timeline-element-title">poste</h3>
-          <h4 className="vertical-timeline-element-subtitle">zone</h4>
-          <p>tâches</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: "rgb(255, 255, 255)", color: "#000000" }}
-          contentArrowStyle={{ borderRight: "7px solid  rgb(255, 255, 255)" }}
-          date="2011 - present"
-          iconStyle={{ background: "rgb(255, 255, 255)", color: "#fff" }}
-          icon={<MdWork color="#000000" />}
-          intersectionObserverProps={observerProps}
-        >
-          <h3 className="vertical-timeline-element-title">poste</h3>
-          <h4 className="vertical-timeline-element-subtitle">zone</h4>
-          <p>tâches</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-          icon={<FaRegStar color="#ffffff" />}
+          iconStyle={{ background: "linear-gradient(90deg, #1bd6e0 0%, #e62fb8 100%)" }}
+          icon={<FaRegStar color="#ffffff" aria-label="Fin de l'expérience" />}
           contentStyle={{ display: "none" }}
           intersectionObserverProps={observerProps}
         />
