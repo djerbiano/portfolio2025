@@ -5,6 +5,7 @@ import Hero from "./_ui/Hero";
 import AboutMe from "./_ui/AboutMe";
 import Projects from "./_ui/Projects";
 import Experience from "./_ui/Experience";
+import School from "./_ui/School";
 
 const schibsted = Schibsted_Grotesk({ subsets: ["latin"], weight: ["400"] });
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutMe />
         <Projects />
         <Experience />
+        <School />
       </main>
       <footer></footer>
     </div>
