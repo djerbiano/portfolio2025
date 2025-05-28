@@ -21,6 +21,9 @@ export default function Header() {
           <Link href="/#realisation" onClick={() => setOpen(false)}>
             RÉALISATION
           </Link>
+          <Link href="/#experience" onClick={() => setOpen(false)}>
+            EXPÉRIENCE
+          </Link>
           <Link href="/#contact" onClick={() => setOpen(false)}>
             CONTACT
           </Link>

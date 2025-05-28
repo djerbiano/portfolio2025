@@ -106,7 +106,7 @@ export default function Experience() {
     },
   ];
   return (
-    <div className={styles.containerExperience}>
+    <div className={styles.containerExperience} id="experience">
       <p className={styles.title}>Expérience</p>
       <VerticalTimeline className={styles.verticalTimeline}>
         {experiences.map((exp, index) => (
