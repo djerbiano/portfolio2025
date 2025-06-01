@@ -1,5 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { DataContextProvider } from "./context/dataProjects";
+import {ModalContextProvider} from "./context/modalContext";
 
 export const metadata = {
   title: "GHOUDI Saber | Portfolio",
@@ -11,7 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
-        {children}
+        <DataContextProvider>
+          <ModalContextProvider>
+          {children}
+          </ModalContextProvider>
+          </DataContextProvider>
         <Analytics />
       </body>
     </html>

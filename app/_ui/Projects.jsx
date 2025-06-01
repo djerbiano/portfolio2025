@@ -5,9 +5,9 @@ export default function Projects() {
     <div className={styles.projectsContainer} id="realisation">
       <p className={styles.title}>RÉALISATIONS</p>
       <div className={styles.projects}>
-        <OneProject />
-        <OneProject />
-        <OneProject />
+        {Array.from({ length: 3 }, (_, index) => (
+          <OneProject key={index}  index={index} />
+        ))}
       </div>
     </div>
   );
