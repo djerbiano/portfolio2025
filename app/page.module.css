@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   .modalContent {
     color: rgb(0, 0, 0);
     padding: 20px;
@@ -127,6 +128,38 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    word-spacing: 10px;
+    line-height: 1.5;
+    font-size: 1.4rem;
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+
+    :first-child {
+      display: none;
+    }
+
+    .heroTextContainer {
+      max-width: 80vw;
+      padding: 10px;
+      height: max-content;
+      word-spacing: 4px;
+      font-size: 1.2rem;
+      line-height: 2;
+      gap: 10px;
+
+      :nth-last-child(1) {
+        margin-top: 50px;
+        align-self: center;
+      }
+    }
   }
 }
 .highlight {
@@ -166,6 +199,10 @@
   text-align: left;
   font-style: italic;
   letter-spacing: 10px;
+
+  @media (max-width: 768px) {
+    letter-spacing: 0;
+  }
 }
 
 .aboutContainer {
@@ -173,7 +210,7 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 10vh;
   gap: 10vw;
   margin: auto;
@@ -187,13 +224,30 @@
       text-align: center;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 80vw;
+    & > :last-child {
+      display: none;
+    }
+    .aboutTextContainer {
+      width: 100%;
+      padding: 10px;
+      /* height: max-content; */
+      word-spacing: 4px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      gap: 10px;
+    }
+  }
 }
 
 .projectsContainer {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   p {
     margin-top: 100px;
@@ -205,6 +259,15 @@
     width: 100%;
     gap: 30px;
     margin: auto;
+  }
+  @media (max-width: 768px) {
+    :nth-child(1) {
+      margin: 80px 0px 0px 0px;
+    }
+    .projects {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 }
 
@@ -231,6 +294,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    .projectImage {
+      object-fit: contain;
+      overflow: hidden;
+    }
   }
 }
 .project:hover:after {
@@ -334,14 +405,17 @@
   }
 
   .contactForm {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
     min-width: 50%;
     max-width: 600px;
     margin: auto;
+
     input,
     textarea {
+      font-family: inherit;
       width: 100%;
       padding: 15px 20px;
       background: rgba(255, 255, 255, 0.05);
@@ -369,6 +443,9 @@
     }
 
     button {
+      width: 50%;
+      max-width: 200px;
+      margin: auto;
       padding: 15px;
       background: linear-gradient(90deg, rgba(230, 47, 184, 1) 0%, rgba(27, 214, 224, 1) 100%);
       color: white;
@@ -384,6 +461,36 @@
         box-shadow: 0 4px 15px rgba(27, 214, 224, 0.4);
       }
     }
+    .contactAreaDesigneRight {
+      z-index: -1;
+      position: absolute;
+      top: -40%;
+      right: -25%;
+      width: 20vw;
+      max-width: 300px;
+      min-width: 200px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: #e62fb8;
+      opacity: 0.15;
+      filter: blur(50px);
+      animation: float 8s ease-in-out infinite;
+    }
+    .contactAreaDesigneLeft {
+      z-index: -1;
+      position: absolute;
+      bottom: -40%;
+      left: -25%;
+      width: 20vw;
+      max-width: 300px;
+      min-width: 200px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: #1bd6e0;
+      opacity: 0.15;
+      filter: blur(50px);
+      animation: float 8s ease-in-out infinite;
+    }
   }
 }
 
@@ -395,5 +502,14 @@
 
   .closeMenu {
     transform: translateX(-100%);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -90px);
   }
 }
