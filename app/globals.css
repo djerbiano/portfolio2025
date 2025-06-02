@@ -28,7 +28,7 @@ html {
 html,
 body {
   max-width: 1990px;
-  overflow-x: hidden;
+  overflow: hidden;
   margin: auto;
 }
 
@@ -41,4 +41,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: -1;
 }
