@@ -29,7 +29,7 @@ export default function Modal() {
   return (
     <div className={styles.modal}>
       <div className={styles.modalContent}>
-        <IoIosCloseCircleOutline onClick={() => setIsOpen(!isOpen)} />
+        <IoIosCloseCircleOutline fill="#ff0000" onClick={() => setIsOpen(!isOpen)} />
         <h2>Description du projet :</h2>
         <p>{data[indexDataProject].description}</p>
         <h3>Difficultés rencontrées :</h3>

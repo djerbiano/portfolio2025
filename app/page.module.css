@@ -27,8 +27,8 @@
 
     :nth-child(1) {
       position: absolute;
-      top: 30px;
-      right: 30px;
+      top: 10px;
+      right: 10px;
       cursor: pointer;
       font-size: 2rem;
     }
@@ -219,9 +219,9 @@
   margin-top: 10vh;
   gap: 3vw;
   margin: auto;
-    & > :last-child {
-      width:300px;
-    }
+  & > :last-child {
+    width: 300px;
+  }
   .aboutTextContainer {
     width: 30%;
     word-spacing: 10px;
