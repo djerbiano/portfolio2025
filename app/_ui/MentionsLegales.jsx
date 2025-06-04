@@ -14,7 +14,7 @@ export default function MentionsLegales() {
             <br />
             <strong>Statut</strong> : Étudiant en développement web
             <br />
-            <strong>Contact</strong> :{" "}
+            <strong>Contact</strong> :
             <a href="mailto:saberghoudi2222@hotmail.fr" title="Envoyer un mail à Saber">
               saberghoudi2222@hotmail.fr
             </a>
