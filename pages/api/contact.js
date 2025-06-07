@@ -14,8 +14,6 @@ export default async function handler(req, res) {
 
   const result = contactSchema.safeParse(req.body);
   if (!result.success) {
-    console.log(result.error.issues);
-    console.log(result.error.flatten());
     return res.status(400).json({
       error: "Validation failed",
       details: result.error.flatten(),
