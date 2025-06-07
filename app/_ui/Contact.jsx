@@ -66,7 +66,7 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
-        {errors.name && <p className="text-red-600">{errors.name}</p>}
+        {errors.name && <p className={styles.formTextError}>{errors.name}</p>}
         <label htmlFor="email" className={styles.hiddenLabel}>
           Email
         </label>
@@ -80,7 +80,7 @@ export default function Contact() {
           onChange={handleChange}
           required
         />
-        {errors.email && <p className="text-red-600">{errors.email}</p>}
+        {errors.email && <p className={styles.formTextError}>{errors.email}</p>}
         <label htmlFor="message" className={styles.hiddenLabel}>
           Message
         </label>
@@ -93,12 +93,12 @@ export default function Contact() {
           placeholder="Message"
           required
         ></textarea>
-        {errors.message && <p className="text-red-600">{errors.message}</p>}
+        {errors.message && <p className={styles.formTextError}>{errors.message}</p>}
         <button type="submit" disabled={loading}>
           {loading ? "Envoi..." : "Envoyer"}
         </button>
         {success && <p className="text-green-600">Message envoyé ✅</p>}
-        {success === false && <p className="text-red-600">Erreur lors de l'envoi ❌</p>}
+        {success === false && <p className={styles.formTextError}>Erreur lors de l'envoi ❌</p>}
       </form>
     </div>
   );
