@@ -53,6 +53,7 @@ export default function Contact() {
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <div className={styles.contactAreaDesigneRight}></div>
         <div className={styles.contactAreaDesigneLeft}></div>
+        
         <input type="text" name="name" placeholder="Nom" value={formData.name} onChange={handleChange} required />
         {errors.name && <p className="text-red-600">{errors.name}</p>}
         <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
