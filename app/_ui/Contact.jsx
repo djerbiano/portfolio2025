@@ -48,18 +48,46 @@ export default function Contact() {
   };
   return (
     <div className={styles.contactContainer} id="contact">
-      <p className={styles.title}>CONTACT</p>
+      <h2 className={styles.title}>CONTACT</h2>
       <p className={styles.subtitle}>Envoyez-moi un message !</p>
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <div className={styles.contactAreaDesigneRight}></div>
         <div className={styles.contactAreaDesigneLeft}></div>
-        
-        <input type="text" name="name" placeholder="Nom" value={formData.name} onChange={handleChange} required />
+        <label htmlFor="name" className={styles.hiddenLabel}>
+          Nom complet
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          aria-label="nom"
+          placeholder="Nom"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
         {errors.name && <p className="text-red-600">{errors.name}</p>}
-        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <label htmlFor="email" className={styles.hiddenLabel}>
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          aria-label="email"
+          placeholder="Email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
         {errors.email && <p className="text-red-600">{errors.email}</p>}
+        <label htmlFor="message" className={styles.hiddenLabel}>
+          Message
+        </label>
         <textarea
+          id="message"
           name="message"
+          aria-label="message"
           value={formData.message}
           onChange={handleChange}
           placeholder="Message"

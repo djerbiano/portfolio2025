@@ -92,9 +92,7 @@
   margin-top: 10vh;
   gap: 10vw;
   margin: auto;
-}
-.heroContainer {
-  :first-child {
+  & :first-child {
     width: 50%;
     max-width: 400px;
   }
@@ -107,6 +105,13 @@
   line-height: 1.5;
   font-size: 1.4rem;
   width: 50%;
+}
+.heroTitle {
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0;
+  line-height: 0.9;
+  font-weight: normal;
 }
 .highlight {
   background: linear-gradient(90deg, rgba(230, 47, 184, 1) 0%, rgba(27, 214, 224, 1) 100%);
@@ -147,7 +152,7 @@
   }
 }
 .aboutTextContainer {
-  width: 30%;
+  width: 50%;
   word-spacing: 10px;
   line-height: 1.5;
 }
@@ -377,6 +382,17 @@
   filter: blur(50px);
   animation: float 8s ease-in-out infinite;
 }
+.hiddenLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .mentionsContent {
   position: relative;
@@ -455,6 +471,7 @@
   background-color: #3e3448d4;
   color: #ffffff;
   font-size: 0.8rem;
+  text-align: center;
 
   a {
     color: #ffffff;
@@ -497,15 +514,13 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
-  }
-  .heroContainer {
-    :first-child {
+    & > :first-child {
       display: none;
     }
   }
 
   .heroTextContainer {
-    max-width: 80vw;
+    width: 80vw;
     padding: 10px;
     height: max-content;
     word-spacing: 4px;
@@ -542,7 +557,6 @@
     padding: 10px;
     word-spacing: 4px;
     font-size: 1.1rem;
-    line-height: 1.5;
     gap: 10px;
   }
 

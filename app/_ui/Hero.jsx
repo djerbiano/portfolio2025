@@ -7,8 +7,8 @@ export default function Hero() {
       <ImgProfile />
       <div className={styles.heroTextContainer}>
         <p>Bonjour !</p>
-        <p>Moi c&apos;est Saber. </p>
-        <p> Développeur full-stack </p>
+        <h1 className={styles.heroTitle}>Moi c&apos;est Saber.</h1>
+        <h2 className={styles.heroTitle}>Développeur full-stack</h2>
         <p>Specialisé en MERN Stack, Java et Spring Boot.</p>
         <button className={styles.highlight}> Télécharger mon CV</button>
       </div>

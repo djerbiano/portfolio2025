@@ -12,7 +12,7 @@ export default function ParticlesBackground() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsMounted(true), 500);
+    const timer = setTimeout(() => setIsMounted(true), 1000);
     return () => clearTimeout(timer);
   }, []);
 

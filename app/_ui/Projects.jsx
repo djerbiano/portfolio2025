@@ -3,7 +3,7 @@ import OneProject from "./OneProject";
 export default function Projects() {
   return (
     <div className={styles.projectsContainer} id="realisation">
-      <p className={styles.title}>RÉALISATIONS</p>
+      <h2 className={styles.title}>RÉALISATIONS</h2>
       <div className={styles.projects}>
         {Array.from({ length: 3 }, (_, index) => (
           <OneProject key={index}  index={index} />

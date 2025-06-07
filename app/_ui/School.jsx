@@ -31,9 +31,9 @@ export default function School() {
   ];
   return (
     <div className={styles.containerEtudes}>
-      <p className={`${styles.title} ${styles.titleEtude}`}>
+      <h2 className={`${styles.title} ${styles.titleEtude}`}>
         <span className={styles.emojiEtudes}>🎓</span> ÉTUDES
-      </p>
+      </h2>
       <div className={styles.wrapperCards}>
         <Fade direction="left" cascade damping={0.2}>
           {formations.map((form, index) => (
