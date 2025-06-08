@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "../page.module.css";
-export default function ImgProfile() {
+export default function ImgProfile({ animation }) {
   return (
-    <div className={styles.personnelImageContainer}>
+    <div className={styles.personnelImageContainer} ref={animation}>
       <Image
         className={styles.personnelImage}
         src="/sg2025.webp"

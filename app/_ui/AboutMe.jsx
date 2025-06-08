@@ -4,7 +4,7 @@ export default function AboutMe() {
   return (
     <div className={styles.aboutContainer} id="presentation">
       <div className={styles.aboutTextContainer}>
-        <h2 className={styles.title}>PRÉSENTATION</h2>
+        <h2 className={`${styles.title} ${styles.aboutTitle}`}>PRÉSENTATION</h2>
         <p>
           Développeur full-stack spécialisé en MERN Stack (MongoDB, Express, React, Node.js), je développe des
           applications web modernes, rapides et évolutives. Basé à Brest, je suis passionné par le code, l’UX soignée et
