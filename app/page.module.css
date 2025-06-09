@@ -92,7 +92,6 @@
   margin-top: 10vh;
   gap: 10vw;
   margin: auto;
-
 }
 .heroTextContainer {
   display: flex;
@@ -107,7 +106,6 @@
   font-size: 1.4rem;
   padding: 0;
   margin: 0;
-  line-height: 0.9;
   font-weight: normal;
 }
 .highlight {
@@ -149,14 +147,13 @@
   margin-top: 10vh;
   gap: 3vw;
   margin: auto;
- 
 }
 .aboutTextContainer {
   width: 50%;
   word-spacing: 10px;
   line-height: 1.5;
 }
-.aboutTitle{
+.aboutTitle {
   margin-top: 0px;
 }
 .projectsContainer {
@@ -181,7 +178,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
   height: 300px;
   gap: 10px;
   background-color: #505050;
@@ -534,11 +530,16 @@
     gap: 10px;
   }
 
-  .heroTextContainer {
+  /* .heroTextContainer {
     :last-child {
       margin-top: 50px;
       align-self: center;
     }
+  } */
+
+  .heroTextContainer button {
+    margin-top: 50px;
+    align-self: center;
   }
   .heroTitle {
     font-size: 1em;
