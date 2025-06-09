@@ -274,7 +274,7 @@
 
 .contactContainer {
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -610,6 +610,8 @@
     transform: translate(0, -90px);
   }
 }
+
+
 /*for gsap animation */
 .heroTextContainer p span,
 .heroTextContainer h1 span,
