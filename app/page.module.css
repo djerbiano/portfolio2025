@@ -482,7 +482,29 @@
     text-decoration: underline;
   }
 }
+.socialLinksContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 10px;
+}
 
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialLinks a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: #b5a0ff;
+  transform: scale(1.1);
+}
 @media (max-width: 768px) {
   .hamburgerIcon {
     display: block;
@@ -610,7 +632,6 @@
     transform: translate(0, -90px);
   }
 }
-
 
 /*for gsap animation */
 .heroTextContainer p span,
