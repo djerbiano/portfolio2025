@@ -106,8 +106,8 @@ export default function Experience() {
     },
   ];
   return (
-    <div className={styles.containerExperience} id="experience">
-      <h2 className={styles.title}>Expérience</h2>
+    <div className={styles.containerExperience} id="experience" >
+      <h2 className={styles.title} tabIndex={0} aria-label="section des expériences professionnelles">Expérience</h2>
       <VerticalTimeline className={styles.verticalTimeline}>
         {experiences.map((exp, index) => (
           <VerticalTimelineElement

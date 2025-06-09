@@ -41,7 +41,7 @@ export default function AboutMe() {
   });
 
   return (
-    <div className={styles.aboutContainer} id="presentation" ref={containerRef}>
+    <div className={styles.aboutContainer} id="presentation" ref={containerRef} tabIndex={0} aria-label="presentation">
       <div className={styles.aboutTextContainer} ref={textRef}>
         <h2 className={`${styles.title} ${styles.aboutTitle}`}>PRÉSENTATION</h2>
         <p>

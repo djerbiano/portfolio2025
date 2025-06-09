@@ -1,18 +1,24 @@
 const projectsData = [
   {
-    description: "projet1",
-    competences: "compétences1",
+    title: "Projet 1",
+    description: "Description du projet 1",
+    competences: "Compétences utilisées : React, Node.js",
     lien: "https://www.google.fr",
+    imageAlt: "Capture d'écran du projet 1",
   },
   {
-    description: "projet2",
-    competences: "compétences2",
+    title: "Projet 2",
+    description: "Description du projet 2",
+    competences: "Compétences utilisées : MongoDB, Express",
     lien: "https://www.google.fr",
+    imageAlt: "Capture d'écran du projet 2",
   },
   {
-    description: "projet3",
-    competences: "compétences3",
+    title: "Projet 3",
+    description: "Description du projet 3",
+    competences: "Compétences utilisées : Java, Spring Boot",
     lien: "https://www.google.fr",
+    imageAlt: "Capture d'écran du projet 3",
   },
 ];
 

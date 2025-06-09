@@ -48,7 +48,7 @@ export default function Hero() {
         <h1 className={styles.heroTitle}>Moi c&apos;est Saber.</h1>
         <h2 className={styles.heroTitle}>Développeur full-stack</h2>
         <p>Specialisé en MERN Stack, Java et Spring Boot.</p>
-        <button ref={buttonRef} className={styles.highlight}>
+        <button ref={buttonRef} className={styles.highlight} tabIndex={0}>
           Télécharger mon CV
         </button>
       </div>

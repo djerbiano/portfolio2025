@@ -47,7 +47,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className={styles.contactContainer} id="contact">
+    <div className={styles.contactContainer} id="contact" tabIndex={0} aria-label="section de contact">
       <h2 className={styles.title}>CONTACT</h2>
       <p className={styles.subtitle}>Envoyez-moi un message !</p>
       <form onSubmit={handleSubmit} className={styles.contactForm}>

@@ -31,7 +31,7 @@ export default function School() {
   ];
   return (
     <div className={styles.containerEtudes}>
-      <h2 className={`${styles.title} ${styles.titleEtude}`}>
+      <h2 className={`${styles.title} ${styles.titleEtude}`} tabIndex={0} aria-label="section des études">
         <span className={styles.emojiEtudes}>🎓</span> ÉTUDES
       </h2>
       <div className={styles.wrapperCards}>

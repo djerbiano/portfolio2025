@@ -10,8 +10,8 @@ export default function Header() {
   return (
     <>
       <HamburgerMenu open={open} setOpen={setOpen} />
-      <header className={` ${styles.header} ${open ? styles.openMenu : styles.closeMenu}`}>
-        <nav>
+      <header aria-label="banner" className={` ${styles.header} ${open ? styles.openMenu : styles.closeMenu}`}>
+        <nav aria-label="navigation principale">
           <Link href="#hero" onClick={() => setOpen(false)}>
             ACCUEIL
           </Link>
