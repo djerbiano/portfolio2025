@@ -609,3 +609,13 @@
     transform: translate(0, -90px);
   }
 }
+/*for gsap animation */
+.heroTextContainer p span,
+.heroTextContainer h1 span,
+.heroTextContainer h2 span {
+  opacity: 0;
+  visibility: hidden;
+}
+.heroTextContainer {
+  opacity: 0;
+}
