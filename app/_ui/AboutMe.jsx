@@ -22,7 +22,7 @@ export default function AboutMe() {
           end: "bottom 50%",
           scrub: true,
           // pin: true,
-          markers: true,
+          // markers: true,
         },
       });
 
