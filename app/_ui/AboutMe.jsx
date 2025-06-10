@@ -18,10 +18,11 @@ export default function AboutMe() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top 10%",
-          end: "bottom center",
+          start: "top 50%",
+          end: "bottom 50%",
           scrub: true,
-          pin: true,
+          // pin: true,
+          markers: true,
         },
       });
 
