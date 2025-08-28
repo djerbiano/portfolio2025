@@ -12,12 +12,7 @@ export default function SocialLinks() {
       >
         <FaLinkedin />
       </a>
-      <a
-        href="https://github.com/djerbiano"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-      >
+      <a href="https://github.com/djerbiano" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <FaGithub />
       </a>
     </div>

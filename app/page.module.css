@@ -1,41 +1,6 @@
 .main {
   position: relative;
 }
-.modal {
-  position: fixed;
-  inset: 0;
-  background-color: rgb(0, 0, 0);
-  min-width: 100vw;
-  height: 100vh;
-  z-index: 1001;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-.modalContent {
-  color: rgb(0, 0, 0);
-  padding: 20px;
-  position: relative;
-  background-color: rgb(255, 255, 255);
-  min-width: 50%;
-  min-height: 50%;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.modalCloseIcon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  font-size: 2rem;
-}
-.modalButton {
-  align-self: flex-end;
-}
 .container {
   display: flex;
   flex-direction: column;
@@ -590,11 +555,6 @@
     gap: 10px;
   }
 
-  .projectsContainer {
-    :nth-child(1) {
-      margin: 80px 0px 0px 0px;
-    }
-  }
   .projects {
     flex-direction: column;
     gap: 20px;
@@ -604,7 +564,6 @@
     width: 90vw;
   }
   .projectImage {
-    object-fit: contain;
     overflow: hidden;
   }
 

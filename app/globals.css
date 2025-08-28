@@ -28,7 +28,7 @@ html {
 html,
 body {
   max-width: 1990px;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: auto;
 }
 

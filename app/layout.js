@@ -1,7 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { DataContextProvider } from "./context/dataProjects";
-import { ModalContextProvider } from "./context/modalContext";
 import ParticlesBackground from "./_ui/ParticlesBackground";
 
 export const metadata = {
@@ -17,13 +15,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
-        <DataContextProvider>
-          <ModalContextProvider>
-            <ParticlesBackground />
-            {children}
-          </ModalContextProvider>
-        </DataContextProvider>
-
+        <ParticlesBackground />
+        {children}
         <Analytics />
       </body>
     </html>
